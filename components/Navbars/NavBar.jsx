@@ -25,8 +25,8 @@ const NavBar = () => {
             return (
               <Link key={index} href={link.href} passHref>
                 <span
-                  className={`text-white cursor-pointer ${
-                    isActive && "font-bold text-violet-700"
+                  className={` cursor-pointer ${
+                    isActive ? "font-bold text-violet-700" : "text-white"
                   }`}
                 >
                   {link.name}
