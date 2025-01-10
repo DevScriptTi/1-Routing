@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-
+import { Wrapper } from "./wrapper";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +12,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {children}
+        {/* <Wrapper> */}
+          {children}
+        {/* </Wrapper> */}
       </body>
     </html>
   );

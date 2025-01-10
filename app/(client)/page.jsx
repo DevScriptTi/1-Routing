@@ -8,6 +8,11 @@ async function HomePage() {
     setTimeout(resolve, 500);
   });
 
+  if(Math.random() < 0.5) {
+    throw new Error("An error occurred while rendering the home page");
+
+  }
+
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-4">Welcome to the Home Page</h1>
