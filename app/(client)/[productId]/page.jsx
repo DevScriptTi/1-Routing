@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import React from "react";
 
 export const generateMetadata = ({ params }) => {
@@ -26,16 +27,7 @@ const ProductDetails = async ({ params }) => {
     );
   }
   if (!product) {
-    return (
-      <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
-          <h1 className="text-2xl font-bold mb-4">Product Not Found</h1>
-          <p className="text-gray-700 mb-4">
-            The product with ID {productId} does not exist.
-          </p>
-        </div>
-      </div>
-    );
+    return notFound();
   }
 
   return (
